@@ -1,183 +1,88 @@
-In this project, let's build a **Nxt Trendz - Cart Features** by applying the concepts we have learned till now.
+# Nxt Trendz – E-Commerce Web Application
 
-### Refer to the video below:
+Nxt Trendz is a responsive e-commerce web application built using React. It provides users with an online shopping experience with product browsing, user authentication, product details, and protected routes.
 
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-output.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
+The project focuses on building reusable UI components, handling application state, integrating REST APIs, and implementing navigation in a React application.
 
-### Design Files
+## 🚀 Features
 
-<details>
-<summary>Click to view</summary>
+* **User Authentication:** Login functionality with credential validation.
+* **Product Listing:** Fetch and display products from REST APIs.
+* **Product Details:** View detailed information about individual products.
+* **Protected Routes:** Restrict access to authenticated pages.
+* **Product Filtering:** Filter products based on available product attributes.
+* **Responsive UI:** Create a user-friendly shopping interface across screen sizes.
+* **Routing:** Navigate between application pages using React Router.
+* **Session Handling:** Manage authentication information using browser storage.
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-sm-output-v0.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-lg-output.png)
+## 🛠️ Tech Stack
 
-</details>
+* **Frontend:** React.js, JavaScript, HTML5, CSS3
+* **UI & Styling:** Bootstrap, CSS
+* **Routing:** React Router
+* **API Integration:** REST APIs, HTTP requests
+* **Authentication:** JWT-based authentication
+* **Storage:** Browser local storage
+* **Development Tools:** Git, GitHub, npm
 
-### Set Up Instructions
+## ⚙️ Getting Started
 
-<details>
-<summary>Click to view</summary>
+### Prerequisites
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+Make sure you have the following installed:
 
-### Completion Instructions
+* Node.js
+* npm
+* Git
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+### Installation
 
-The app must have the following functionalities
+**1. Clone the repository**
 
-- When an unauthenticated user tries to access the **Cart** Route, then the page should be navigated to **Login** Route
+```bash
+git clone https://github.com/Rudraksh6755/Rudra-Nxt-Trendz.git
+```
 
-- Following are the features to be implemented
+**2. Navigate to the project directory**
 
-  - Feature 1
+```bash
+cd Rudra-Nxt-Trendz
+```
 
-    - When an authenticated user tries to add the same product multiple times
-      - The quantity of the product should be updated accordingly, and the count of the cart items in the header should be remained same
+**3. Install dependencies**
 
-  - Feature 2
+```bash
+npm install
+```
 
-    - The total amount and number of items in the cart should be displayed in the **Cart** Route
+**4. Start the development server**
 
-  - Feature 3
+```bash
+npm start
+```
 
-    - In each cart item in the cart
-      - When the plus icon is clicked, then the quantity of the product should be incremented by one
-      - When the minus icon is clicked, then the quantity of the product should be decremented by one
-      - When the quantity of the product is one and the minus icon is clicked, then the respective product should be removed from the cart
-      - Based on the quantity of the product, the product price and the Cart Summary, i.e the total cost should be updated accordingly
+Open the local URL displayed in your terminal to access the application.
 
-  - Feature 4
+## 🧠 Key Learning Outcomes
 
-    - When an authenticated user clicks on the remove button, cart item should be removed from the cart list
+* Developed reusable React components to structure the application.
+* Implemented client-side routing and protected pages.
+* Integrated REST APIs to retrieve and display product data.
+* Worked with authentication tokens and browser storage.
+* Practiced responsive web design and frontend application development.
 
-  - Feature 5
+## 🎯 Project Objective
 
-    - When an authenticated user clicks on the **Remove All** button, all the cart items should be removed from the cart and [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png) should be displayed
+The objective of this project was to develop practical skills in React development by building an e-commerce interface with API integration, authentication, navigation, and product browsing functionality.
 
-- The `CartContext` has an object as a value with the following properties
-  - `cartList` - this key stores the cart items
-  - `removeAllCartItems` - this method is used to remove all the cart items in the `cartList`
-  - `addCartItem` - this method adds the cart item to the `cartList`
-  - `removeCartItem` - this method removes the cart item from the `cartList`
-  - `incrementCartItemQuantity` - this method increases the quantity of a product in the `cartList`
-  - `decrementCartItemQuantity` - this method decreases the quantity of a product in the `cartList`
+## 👨‍💻 Developer
 
-</details>
+**Rudraksh Kawale**
 
-<details>
-<summary>Components Structure</summary>
+* GitHub: [Rudraksh6755](https://github.com/Rudraksh6755)
+* Project Repository: [Rudra-Nxt-Trendz](https://github.com/Rudraksh6755/Rudra-Nxt-Trendz)
+* LinkedIn: [rudraksh-kawale](https://www.linkedin.com/in/rudraksh-kawale/)
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png" alt="component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+---
 
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/App.js`
-- `src/components/Cart/index.js`
-- `src/components/Cart/index.css`
-- `src/components/CartItem/index.js`
-- `src/components/CartItem/index.css`
-- `src/components/CartSummary/index.js`
-- `src/components/CartSummary/index.css`
-</details>
-
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- The `line-height` CSS property sets the height of a line box. It's commonly used to set the distance between lines of text
-
-  ```
-  line-height: 1.5;
-  ```
-
-    <br/>
-    <img src="https://assets.ccbp.in/frontend/react-js/line-height-img.png" alt="line height" style="width:90%; max-width: 600px;"/>
-
-- The array method `find()` returns the first item's value that satisfies the provided testing function. If no item is found, it returns `undefined`
-
-  **Syntax**: `arr.find(Testing Function)`
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- `BsPlusSquare`, `BsDashSquare` icons from `react-icons` should be used for **plus** and **minus** buttons in cart item
-- The Cart Item should consist of two HTML button elements with data-testid attribute values as **plus** and **minus** respectively
-- `AiFillCloseCircle` icon from react-icons should be used for **remove** button in cartItem
-- The Cart Item should consist of an HTML button element with data-testid attribute values as **remove**
-- The product image in **Cart Item** Route should have the alt as `title` of the product
-
-- Prime User credentials
-
-  ```text
-   username: rahul
-   password: rahul@2021
-  ```
-
-- Non-Prime User credentials
-
-  ```text
-   username: raja
-   password: raja@2021
-  ```
-
-</details>
-
-### Resources
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #171f46; width: 150px; padding: 10px; color: white">Hex: #171f46</div>
-<div style="background-color: #616e7c; width: 150px; padding: 10px; color: white">Hex: #616e7c</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+*Built as a hands-on project to strengthen React.js and frontend development skills.*
